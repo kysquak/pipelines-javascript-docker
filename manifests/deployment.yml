@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: kysquakpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: kysquakpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: kysquakpipelinesjavascriptdocker 
+          image: kysquakcontainerregistry.azurecr.io/kysquakpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
